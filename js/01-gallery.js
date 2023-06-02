@@ -21,7 +21,6 @@ function createGalleryItemsMarkup(items) {
     }).join('');
 }
 
-
 function onImgClick(e) {
   e.preventDefault();
   const isItemImage = e.target.classList.contains('gallery__image');
@@ -34,8 +33,7 @@ function onImgClick(e) {
       onClose: (instance) => {
         window.removeEventListener('keydown', onEscKeyPress);
       },
-    }
-  );
+    });
   instance.show();
   function onEscKeyPress(e) {
     const ESC_KEY_CODE = 'Escape';
