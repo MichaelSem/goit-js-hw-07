@@ -23,7 +23,7 @@ function createGalleryItemsMarkup(items) {
 
 function onImgClick(e) {
   e.preventDefault();
-  const isItemImage = e.target.classList.contains('gallery__image');
+  const isItemImage = e.target.nodeName === "IMG";
   if (!isItemImage) return;
   const currentImgUrl = e.target.dataset.source;
   const instance = basicLightbox.create(`<img src="${currentImgUrl}" width="1280" height="auto"/>`, {
